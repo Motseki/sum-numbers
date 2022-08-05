@@ -1,0 +1,37 @@
+<script>
+
+    // Javascript program to check if there exists a pair
+    // in array whose sum results in x.
+    
+    // Function to find and print pair
+        function chkPair(num , size , target) {
+        
+            for (i = 0; i < (size - 1); i++) {
+                for (j = (i + 1); j < size; j++) {
+        
+                    if (num[i] + num[j] == target) {
+                        document.write("Output: [" + num[i] + ", " + num[j] + "]");
+                        return true;
+                    }
+                }
+            }
+    
+            return false;
+        }
+    
+            let num = [2, 7, 11, 15];
+           
+            let target = 9;
+          
+            let size = num.length;
+    
+            if (chkPair(num, size, target)) {
+                document.write("<br/>Explanation: Because " + num[i] + " + " + num[j] +" === "
+                 + target +", we return [" + num[i] + ", " + num[j] + "]" );
+            }
+            else {
+                document.write("<br/>No valid pair exists for " + target);
+            }
+
+    </script>
+    
